@@ -15,10 +15,10 @@ options=(!strip !emptydirs)
 source=(${_pkgname}::"git+https://github.com/salientos/${pkgname}.git")
 sha256sums=('SKIP')
 
-pkgver() {
-  cd ${_pkgname}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
-}
+#pkgver() {
+#  cd ${_pkgname}
+#  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+#}
 
 package() {
   install -dm755 "${pkgdir}"/usr/share/grub/themes/
