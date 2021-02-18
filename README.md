@@ -2,4 +2,4 @@
 
 Salient OS Grub Theme
 
-[[https://github.com/salientos/salientos-grub-theme/blob/master/screenshot.png|alt=Salient]]
+<img src="https://raw.githubusercontent.com/salientos/salientos-grub-theme/master/screenshot.png">
