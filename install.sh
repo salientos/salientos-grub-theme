@@ -70,6 +70,9 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
 
   echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
 
+  # Copy theme to /boot
+  cp -TR ./${THEME_NAME} /boot/grub/themes/${THEME_NAME}
+
   # Update grub config
   echo -e "Updating grub config..."
   if has_command update-grub; then
