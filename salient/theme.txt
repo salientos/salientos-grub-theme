@@ -7,13 +7,8 @@ title-text: ""
 title-color: "#e8e8e8"
 desktop-image: "background.png"
 desktop-color: "#000000"
-terminal-font: "Unifont Regular 16"
 terminal-box: "terminal_box_*.png"
-terminal-left: "0"
-terminal-top: "0"
-terminal-width: "100%"
-terminal-height: "100%"
-terminal-border: "0"
+terminal-font: "Unifont Regular 16"
 
 # Progress bar
 + progress_bar {
@@ -23,12 +18,17 @@ terminal-border: "0"
 	height = 15
 	width = 100%
 	show_text = false
-
 	# just two vertical pixels of color #1793d1
     bar_style = "progress_bar/progress_bar_*.png"
     highlight_style = "progress_bar/progress_bar_hl_*.png"
 }
 
+# Image logo
++ image {
+	top = 13%
+	left = 50%-94
+    file = "logo.png"
+}
 
 # Show countdown message
 + label {
@@ -40,13 +40,6 @@ terminal-border: "0"
 	text = "Booting in %d seconds"
 	color = "#e8e8e8"
 	font = "Unifont Regular 16"
-}
-
-# Image logo
-+ image {
-	top = 13%
-	left = 50%-95
-    file = "logo.png"
 }
 
 # Show the boot menu
@@ -67,67 +60,13 @@ terminal-border: "0"
   	selected_item_pixmap_style = "select_*.png"
 }
 
-# help menu
-+ hbox {
-	top = 100%-70
-	left = 50%-205
-	height = 25
-
-# Loading
-+ label {
-	text = "Boot - "
-	color = "#e8e8e8"
-}
-
-# label-2
-+ label {
-	text = "Enter"
-	color = "#3281f8"
-}
-
-# label -|-|-
-+ label {
-	width = 60
-}
-
-# Options
-+ label {
-	text = "Options - "
-	color = "#e8e8e8"
-}
-
-# label-4
-+ label {
-	text = "E"
-	color = "#3281f8"
-}
-
-# label -|-|-
-+ label {
-	width = 60
-}
-
-# Command line
-+ label {
-	text = "Command Line - "
-	color = "#e8e8e8"
-}
-
-# label-6
-+ label {
-	text = "C"
-	color = "#3281f8"
-}
-# end hbox
-}
-
 #help bar
 + label {
-	top = 100%-40
-	left = 21%
-	width = 60%
-	height = 25
-	text = "Press Return on Selected Item or Press E to Edit"
+	top = 100%-70
+	left = 0
+	width = 100%
+	height = 20
+	text = "@KEYMAP_MIDDLE@"
 	align = "center"
 	font = "Unifont Regular 16"
 	color = "#e8e8e8"
